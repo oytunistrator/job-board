@@ -10,11 +10,12 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/image",
     "@nuxt/scripts",
-    "@nuxt/icon",
     "@nuxtjs/tailwindcss",
     "@primevue/nuxt-module",
     "@vueuse/nuxt",
+    "nuxt-phosphor-icons",
   ],
+  css: ["~/assets/css/main.css"],
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
@@ -25,6 +26,9 @@ export default defineNuxtConfig({
       ripple: true,
       theme: {
         preset: Aura,
+        options: {
+          darkModeSelector: false,
+        },
       },
     },
     components: {
